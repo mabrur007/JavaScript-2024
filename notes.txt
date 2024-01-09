@@ -1,5 +1,14 @@
-********** 03_highOrder.js *********
-# video 29
+********** Part_29 *********
+# 03_highOrder.js
 - we will use for-of loop in terms of array.
+- we will use for-of loop in terms of Map().
 - we will use for-each loop in terms of array.
 - we will use for-in loop in terms of object.
+
+********** Part_30 *********
+# 04.js
+
+- inside of an arrow function, if there is {} then we will need to add return.
+    if there is (), then no return needed.
+
+- inside filter() method, usually we check any condition.
