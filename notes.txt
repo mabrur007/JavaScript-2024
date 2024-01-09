@@ -12,3 +12,7 @@
     if there is (), then no return needed.
 
 - inside filter() method, usually we check any condition.
+
+- we can add multiple methods in a same line.
+
+- reduce()
