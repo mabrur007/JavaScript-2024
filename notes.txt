@@ -1,0 +1,5 @@
+********** 03_highOrder.js *********
+# video 29
+- we will use for-of loop in terms of array.
+- we will use for-each loop in terms of array.
+- we will use for-in loop in terms of object.
