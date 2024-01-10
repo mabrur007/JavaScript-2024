@@ -20,6 +20,7 @@
 - reduce()
 
 
+********** 06_dom *********
 ********** Part_31 *********
 # one.html
 
@@ -38,3 +39,16 @@
     console.log(myColor)
     l.style.color = `#${myColor}`
 })
+
+
+********** Part_33 *********
+# two.html
+
+-   // console.log(child);
+    // console.log(child.parentElement);
+    // console.log(child.nextElementSibling.innerHTML);
+    // console.log(parent.childNodes);
+
+# three.html 
+
+- we will practice here how to create an element in DOM.

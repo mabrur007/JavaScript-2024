@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three || DOM</title>
+    <style>
+        .bg-dark{
+            background-color: #212121;
+            color: #fff;
+            padding: 5%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    
+
+    
+</body>
+    <!-- <script>
+        const div = document.createElement('div')
+        div.className = 'main'
+        // div.id = 'mainId' 
+        div.id = Math.round(Math.random() * 10 + 1)
+        div.setAttribute("title", "dom practice")
+        div.style.backgroundColor = 'red'
+        div.style.padding = '14px'
+        // div.innerHTML = 'hello world'
+        const addText = document.createTextNode("Practice DOM")
+        div.appendChild(addText)
+        console.log(div); 
+        
+        document.body.appendChild(div)
+    </script> -->
+    <script>
+        for (let i = 0; i < 4; i++) {
+            const myElem = () => {
+                const myDiv = document.createElement("div");
+                myDiv.className = "main"
+                myDiv.id = Math.round((Math.random() * 10) +1)
+                myDiv.setAttribute("title", "Learning")
+                const addText = document.createTextNode("We are learning DOM")
+                myDiv.appendChild(addText)
+                myDiv.style.backgroundColor = "purple"
+                myDiv.style.padding = "14px"
+                myDiv.style.borderRadius = "12px"
+                myDiv.style.fontSize = "34px"
+                myDiv.style.marginBottom = "10px"
+                console.log(myDiv);
+
+                document.body.appendChild(myDiv)
+            }
+
+        myElem()
+        }
+    </script>
+</html>
