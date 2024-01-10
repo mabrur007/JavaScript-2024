@@ -11,8 +11,15 @@
 - inside of an arrow function, if there is {} then we will need to add return.
     if there is (), then no return needed.
 
-- inside filter() method, usually we check any condition.
+- inside filter() method, usually we check any condition. filter returns an array.
+
+- map returns an array. 
 
 - we can add multiple methods in a same line.
 
 - reduce()
+
+********** Part_31 *********
+# one.html
+
+- document.getElementById('firstName').innerHTML = '<h1>Sabbir</h1>'
