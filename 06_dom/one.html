@@ -1,4 +1,4 @@
-// DOM manipulation
+<!-- // DOM manipulation -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,8 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+            padding: 10%;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Learning DOM 1</h1>
+        <h1 id="title" class="heading">Learning DOM 2</h1>
+        <h1 id="title" class="heading">Learning DOM 3</h1>
+        <h2 id="title2" class="heading2">Learning DOM 1</h2>
+        <h2 id="title2" class="heading2">Learning DOM 2</h2>
+        <h2 id="title2" class="heading2">Learning DOM 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, hic!</p>
+    </div>
+
+    <script>
+        document.getElementById('heading').innerHTML = 'Welcome to master class <span style="display: none;">hahaha</span>'
+    </script>
 </body>
 </html>

@@ -19,7 +19,22 @@
 
 - reduce()
 
+
 ********** Part_31 *********
 # one.html
 
 - document.getElementById('firstName').innerHTML = '<h1>Sabbir</h1>'
+
+- innerText : it gives the displayed text 
+
+- textContent : it gives complete text.
+
+
+********** Part_32 *********
+- ex: 
+    const heading = document.querySelectorAll('h1')
+    heading.forEach((l) => {
+    let myColor = Math.floor(Math.random() * 1000)
+    console.log(myColor)
+    l.style.color = `#${myColor}`
+})
