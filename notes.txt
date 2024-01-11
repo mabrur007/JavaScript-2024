@@ -52,3 +52,33 @@
 # three.html 
 
 - we will practice here how to create an element in DOM.
+
+
+********** Part_34 *********
+
+- When we use element.innerHTML, it traverse all the DOM tree 
+    and that is not performance optimized. To make a good performance 
+    optimized code we can follow the code below-
+
+    element.apperndChild(document.createTextNode(carName))
+
+    ex:
+    // this is unoptimized code of adding any dom element
+        // function addElem(car) {
+        //     const li = document.createElement("li")
+        //     li.innerHTML = `${car}`
+        //     document.querySelector(".cars").appendChild(li)
+        // }
+        // addElem("Mgv")
+        // addElem("corolla")
+        // addElem("sedan")
+
+
+        // this is optimized code of adding any dom element (very inmportant)
+        function addCar(carName){
+            const li = document.createElement('li'); // we have created our 'li' element here
+            const car = document.createTextNode(carName) // we have created textNode here
+            li.appendChild(car) // we have set the textNode in our created 'li' 
+            const ul = document.querySelector('.cars') // we catch the target parent 'ul' here. 
+            ul.appendChild(li) // we have set our created 'li' inside the parent 'ul'
+        }
