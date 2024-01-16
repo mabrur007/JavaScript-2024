@@ -17,5 +17,39 @@
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
    </div>
+
+
+   <script>
+        // document.getElementById("owl").onclick = function(){
+        //     alert("owl clicked ")
+        // }
+
+        // document.getElementById("images").addEventListener('click', function(){
+        //     console.log("Clicked inside the ul");
+        // })
+
+        // document.getElementById("owl").addEventListener('click', function(){
+        //     console.log("clicked on owl");
+        // })
+
+        // document.getElementById("google").addEventListener('click', function(e){
+        //     e.preventDefault(); // to stop going anywhere
+        //     e.stopPropagation() // to stop event bubling
+        //     console.log("google clicked");
+        // })
+
+        document.querySelector("#images").addEventListener('click', function(e){
+            e.preventDefault();
+            const elemTag = e.target.tagName
+            console.log(elemTag);
+            if(elemTag === 'IMG'){
+                // console.log(e.target.tagName);
+                const removeLi = e.target.parentNode
+                removeLi.remove()
+                // removeLi.parentNode.removeChild(removeLi) // new version of removing child element
+            }
+        })
+
+   </script>
 </body>
 </html>

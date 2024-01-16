@@ -85,3 +85,21 @@
 
 
 ********** Part_36 *********
+# one.html
+
+- Need to study these:
+    - type, timeStamp, defaultPrevented
+    - target, toElement, srcElement, currentTarget
+    - clientX, clientY, screenX, screenY
+    - altkey, clrtkey, shiftkey, keyCode
+
+- Event propagation is two types:
+    1. event bubling
+    2. event spill-over
+
+    ex:
+    document.getElementById("google").addEventListener('click', function(e){
+        e.preventDefault(); // to stop going anywhere
+        e.stopPropagation() // to stop event bubling
+        console.log("google clicked");
+    })
