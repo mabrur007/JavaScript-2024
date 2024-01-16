@@ -82,3 +82,6 @@
             const ul = document.querySelector('.cars') // we catch the target parent 'ul' here. 
             ul.appendChild(li) // we have set our created 'li' inside the parent 'ul'
         }
+
+
+********** Part_36 *********
