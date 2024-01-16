@@ -1,4 +1,4 @@
-const random = parseInt((Math.random() * 100) + 1);
+let random = parseInt((Math.random() * 100) + 1);
 
 const userInput = document.querySelector("#guessField");
 const submit = document.querySelector("#subt");
@@ -30,7 +30,7 @@ function validateGuess(guess) {
         alert('Please enter a number less than 100');
     } else {
         prevGuess.push(guess);
-        if (numberOfGuesses === 11) {
+        if (numberOfGuesses === 3) {
             displayGuess(guess);
             displayMessage(`Game over! Random number was: ${random}`);
             endGame()
@@ -48,7 +48,7 @@ function checkGuess(guess) {
     } else if (guess < random) {
         displayMessage('Given number is low');
     } else if (guess > random) {
-        displayMessage('Given number is low');
+        displayMessage('Given number is high');
     }
 }
 
@@ -56,7 +56,7 @@ function displayGuess(guess) {
     userInput.value = '';
     guessSlot.innerHTML += `${guess}, `;
     numberOfGuesses++;
-    remaining.innerHTML = `${11 - numberOfGuesses}`;
+    remaining.innerHTML = `${4 - numberOfGuesses}`;
 }
 
 function displayMessage(message) {
@@ -68,10 +68,28 @@ function endGame() {
     userInput.setAttribute('disabled', '')
     p.classList.add('button')
     p.innerHTML = `<h2 id="newGame">Start new game</h2>`
+    p.style.border = '2px solid green'
+    p.style.backgroundColor = '#161616'
+    p.onmouseover = function () {
+        this.style.cursor = 'pointer'
+    }
+    startOver.appendChild(p)
     playGame = false;
-    newtGame();
+    newGame();
 }
 
-function newtGame() {
-    //
+function newGame() {
+    const newGameButton = document.querySelector('#newGame');
+    newGameButton.addEventListener('click', function (e) {
+        random = parseInt((Math.random() * 100) + 1);
+        prevGuess = []
+        numberOfGuesses = 1
+        guessSlot.innerHTML = ''
+        remaining.innerHTML = `${4 - numberOfGuesses}`
+        userInput.removeAttribute('disabled')
+        startOver.removeChild(p)
+        displayMessage('')
+        playGame = true;
+
+    })
 }
