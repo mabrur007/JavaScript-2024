@@ -54,19 +54,24 @@ function checkGuess(guess) {
 
 function displayGuess(guess) {
     userInput.value = '';
-    guessSlot.innerHTML += `${guess}`;
+    guessSlot.innerHTML += `${guess}, `;
     numberOfGuesses++;
     remaining.innerHTML = `${11 - numberOfGuesses}`;
 }
 
 function displayMessage(message) {
-    //
+    lowOrHi.innerHTML = `<h2>${message}</h2>`
 }
 
 function endGame() {
-    //
+    userInput.value = ''
+    userInput.setAttribute('disabled', '')
+    p.classList.add('button')
+    p.innerHTML = `<h2 id="newGame">Start new game</h2>`
+    playGame = false;
+    newtGame();
 }
 
-function startGame() {
+function newtGame() {
     //
 }
