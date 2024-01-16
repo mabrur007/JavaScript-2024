@@ -42,11 +42,21 @@ function validateGuess(guess) {
 }
 
 function checkGuess(guess) {
-    //
+    if (guess === random) {
+        displayMessage('You guessed it right!');
+        endGame();
+    } else if (guess < random) {
+        displayMessage('Given number is low');
+    } else if (guess > random) {
+        displayMessage('Given number is low');
+    }
 }
 
 function displayGuess(guess) {
-    //
+    userInput.value = '';
+    guessSlot.innerHTML += `${guess}`;
+    numberOfGuesses++;
+    remaining.innerHTML = `${11 - numberOfGuesses}`;
 }
 
 function displayMessage(message) {
