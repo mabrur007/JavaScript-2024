@@ -103,3 +103,7 @@
         e.stopPropagation() // to stop event bubling
         console.log("google clicked");
     })
+
+********** Part_37 *********
+
+- Theory on syncronus and asyncronus function
